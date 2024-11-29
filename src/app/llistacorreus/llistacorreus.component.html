@@ -1,0 +1,41 @@
+<p>llistacorreus works!</p>
+
+<table>
+  <tr>
+    <h1>sense for</h1>
+  </tr>
+  <tr>
+    <td>Remitent</td>
+    <td>Destinatari</td>
+    <td>contingut</td>
+    <td>llegit?</td>
+  </tr>
+  <tr>
+    <td>{{arrayCorreus[0].remitent}}</td>
+    <td>{{arrayCorreus[0].destinatari}}</td>
+    <td>{{arrayCorreus[0].contingut}}</td>
+    <td>{{arrayCorreus[0].llegit}}</td>
+  </tr>
+  <tr>
+    <td>{{arrayCorreus[1].remitent}}</td>
+    <td>{{arrayCorreus[1].destinatari}}</td>
+    <td>{{arrayCorreus[1].contingut}}</td>
+    <td>{{arrayCorreus[1].llegit}}</td>
+  </tr>
+  <h1>amb for</h1>
+  @for (string of arrayCorreus; track string){
+    <tr>
+    @if(!(string.llegit == true)){
+        <td>{{string.remitent}}</td>
+        <td>{{string.destinatari}}</td>
+        <td>{{string.contingut}}</td>
+        <td>{{string.llegit}}</td>
+    }
+    </tr>
+  }
+  <tr></tr>
+  <tr>
+    <td>numero correus llegits: {{Numerollegits}}</td>
+    <td>numero correus no llegits: {{Numeronollegits}}</td>
+  </tr>
+</table>
