@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {CorreuComponent} from './correu/correu.component';
 import {LlistacorreusComponent} from './llistacorreus/llistacorreus.component';
 
+// @ts-ignore
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CorreuComponent, LlistacorreusComponent],
@@ -10,7 +11,7 @@ import {LlistacorreusComponent} from './llistacorreus/llistacorreus.component';
   standalone: true,
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'correuprova';
 
   nCaractitol: number
@@ -18,13 +19,24 @@ export class AppComponent {
   nClics: number = 0
 
   constructor() {
-    this.nCaractitol = this.title.length
+    this.nCaractitol = comptar(this.title)
 
+
+    }
+
+  ngOnInit(): void {
   }
 
-  clicat(){
+  clicat() {
     this.nCaractitol++
   }
-  protected readonly onclick = onclick;
-
+  protected readonly onclick = onclick
 }
+
+  function comptar(numeroC: String){
+    var numero: number = numeroC.length
+    return numero
+  }
+
+
+
