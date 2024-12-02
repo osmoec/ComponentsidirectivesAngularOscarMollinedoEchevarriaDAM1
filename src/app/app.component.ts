@@ -37,6 +37,7 @@ export class AppComponent implements OnInit {
     var contingut = document.getElementById('paragraf');
     contingut!.innerHTML = 'bons dies'
 
+    this.urlTret = document.URL
 
   }
 
