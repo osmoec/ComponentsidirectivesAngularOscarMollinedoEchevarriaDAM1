@@ -39,6 +39,8 @@ export class AppComponent implements OnInit {
 
     this.urlTret = document.URL
 
+    yellowSubmarine ("h1prin")
+
   }
 
   clicat() {
